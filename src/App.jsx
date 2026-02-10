@@ -13,6 +13,10 @@ import {
   Phone,
   MapPin,
   Menu,
+  Store,
+  Calendar,
+  Truck,
+  Utensils,
 } from "lucide-react";
 
 export default function App() {
@@ -138,35 +142,35 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <FeatureCard
-              icon={Star}
-              title="Hospitality"
-              subtitle="Elevated Service"
+              icon={Utensils}
+              title="Fine Dining & Service"
+              subtitle="Culinary Elegance"
               delay="0s"
-              desc="Serve sweets or amenities with a luxury feel."
+              desc="Designed for high-end food serving, from breakfast in bed to sophisticated hors d'oeuvres. The spill-proof rim ensures a flawless presentation."
               img="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
             />
             <FeatureCard
-              icon={GraduationCap}
-              title="Education"
-              subtitle="Organized Creativity"
+              icon={Palette}
+              title="Creative & Sensory Play"
+              subtitle="Montessori Approved"
               delay="0.1s"
-              desc="The perfect base for activity kits and sensory play."
+              desc="The ultimate workspace for kids' activities. Contains lego, sand, and art supplies, making cleanup effortless while defining a clear creative zone."
               img="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=1974&auto=format&fit=crop"
             />
             <FeatureCard
               icon={Home}
-              title="Home Org"
-              subtitle="Stylish Solutions"
+              title="Curated Home Decor"
+              subtitle="Aesthetic Organization"
               delay="0.2s"
-              desc="A sophisticated solution for displaying decor."
+              desc="A sophisticated foundation for your coffee table or ottoman. Organize books, candles, and botanicals into a cohesive, stylish display."
               img="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
             />
             <FeatureCard
               icon={Briefcase}
-              title="Workspace"
-              subtitle="Professional Order"
+              title="Executive Workspace"
+              subtitle="Professional Clarity"
               delay="0.3s"
-              desc="Keep desks tidy and supplies organized."
+              desc="Instantly create a focused work environment. Spacious enough for your laptop and essentials, keeping your workflow organized and mobile."
               img="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
             />
           </div>
@@ -271,26 +275,26 @@ export default function App() {
               <span className="italic text-stone-400">Orders</span>
             </h2>
             <p className="text-stone-400 text-lg mb-10 leading-relaxed">
-              Elevate your inventory with Tulip Tray. We partner with leading
-              retailers, event planners, and educational institutions to provide
-              premium trays at exclusive wholesale rates. Whether you need a
-              custom color run for a specific event or bulk inventory for your
-              retail locations, our team is dedicated to supporting your
-              business needs with flexible minimums and rapid fulfillment.
+              We partner with businesses of all sizes to provide premium trays
+              at competitive wholesale pricing. Custom colors and branding
+              options available for qualifying orders.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-10">
-              {["Retailers", "Event Planners", "Schools", "Distributors"].map(
-                (item) => (
-                  <div
-                    key={item}
-                    className="border border-stone-700 rounded-lg p-3 text-sm text-stone-300 flex items-center gap-3 hover:bg-stone-800 transition-colors cursor-default"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-cream-50"></div>{" "}
-                    {item}
-                  </div>
-                ),
-              )}
+              {[
+                { label: "Retailers", icon: Store },
+                { label: "Event Planners", icon: Calendar },
+                { label: "Schools", icon: GraduationCap },
+                { label: "Distributors", icon: Truck },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="border border-stone-700 rounded-lg p-3 text-sm text-stone-300 flex items-center gap-3 hover:bg-stone-800 transition-colors cursor-default"
+                >
+                  <item.icon size={18} className="text-cream-50" />
+                  {item.label}
+                </div>
+              ))}
             </div>
             <button
               onClick={() => scrollToSection("contact")}
@@ -346,7 +350,7 @@ export default function App() {
                       Email
                     </div>
                     <div className="text-charcoal-900">
-                      wholesale@tuliptrays.com
+                      sales@tuliptrays.com
                     </div>
                   </div>
                 </div>
@@ -487,9 +491,6 @@ export default function App() {
             </a>
             <a href="#" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Instagram
             </a>
           </div>
           <div className="text-sm">© 2026 Tulip Tray. All rights reserved.</div>
