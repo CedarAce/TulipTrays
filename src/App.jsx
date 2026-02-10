@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen font-sans overflow-x-hidden selection:bg-sage-500 selection:text-white ${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}
+      className={`min-h-screen font-sans overflow-x-hidden selection:bg-[#a68d26] selection:text-white ${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700`}
     >
       {/* --- NAVBAR --- */}
       <Navbar onNavigate={scrollToSection} />
@@ -56,31 +56,29 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in-up opacity-0">
-            <span className="text-xs md:text-sm font-medium tracking-[0.2em] text-stone-500 uppercase mb-6 block">
-              Tulip Tray{" "}
-            </span>
-            <h1 className="text-5xl md:text-7xl font-serif text-charcoal-900 leading-[1.05] mb-8">
-              The One Tray That <br />
-              <span className="italic font-light">Does Everything.</span>
+            <span className="text-xs md:text-sm font-medium tracking-[0.2em] text-stone-500 uppercase mb-6 block"></span>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-charcoal-900 leading-[1.05] mb-8">
+              Built for Business. <br />
+              <span className="text-stone-500">Perfect for Home.</span>
             </h1>
           </div>
 
           <div className="animate-fade-in-up-delay opacity-0">
             <p className="text-lg text-stone-600 max-w-xl mx-auto mb-10 font-light leading-relaxed">
-              A premium, oversized surface designed for luxury hospitality,
-              organized play, and creative workspaces.
+              A commercial-grade, oversized surface designed for hospitality,
+              schools, and efficient workspaces.
             </p>
 
             <div className="flex items-center justify-center gap-6 mb-16">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="bg-charcoal-900 text-white px-8 py-4 rounded-full font-medium hover:bg-black transition-all hover:scale-105 shadow-xl"
+                className="bg-[#a68d26] text-white px-8 py-4 rounded-full font-medium hover:bg-[#85711e] transition-all hover:scale-105 shadow-xl"
               >
                 Request Wholesale Pricing
               </button>
               <button
                 onClick={() => scrollToSection("versatility")}
-                className="text-charcoal-900 font-medium hover:text-stone-600 flex items-center gap-2 group"
+                className="text-charcoal-900 font-medium hover:text-[#a68d26] flex items-center gap-2 group"
               >
                 Explore Uses{" "}
                 <ArrowDown
@@ -134,43 +132,43 @@ export default function App() {
             <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">
               Endless Possibilities
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif text-charcoal-900 mt-3">
-              One Design,{" "}
-              <span className="italic text-stone-500">Infinite Uses</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-charcoal-900 mt-3">
+              One Tray,{" "}
+              <span className="text-stone-500">Multiple Applications</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <FeatureCard
               icon={Utensils}
-              title="Fine Dining & Service"
-              subtitle="Culinary Elegance"
+              title="Food Service"
+              subtitle="Durable & Spill-Proof"
               delay="0s"
-              desc="Designed for high-end food serving, from breakfast in bed to sophisticated hors d'oeuvres. The spill-proof rim ensures a flawless presentation."
+              desc="Designed for high-volume food serving. The spill-proof rim ensures a clean presentation for hotels, restaurants, and catering."
               img="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
             />
             <FeatureCard
               icon={Palette}
-              title="Creative & Sensory Play"
-              subtitle="Montessori Approved"
+              title="Classroom & Education"
+              subtitle="Easy Cleanup"
               delay="0.1s"
-              desc="The ultimate workspace for kids' activities. Contains lego, sand, and art supplies, making cleanup effortless while defining a clear creative zone."
+              desc="The ultimate workspace for kids' activities. Contains lego, sand, and art supplies, making cleanup effortless for schools and daycares."
               img="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=1974&auto=format&fit=crop"
             />
             <FeatureCard
               icon={Home}
-              title="Curated Home Decor"
-              subtitle="Aesthetic Organization"
+              title="Home Organization"
+              subtitle="Functional Display"
               delay="0.2s"
-              desc="A sophisticated foundation for your coffee table or ottoman. Organize books, candles, and botanicals into a cohesive, stylish display."
+              desc="A solid foundation for coffee tables or ottomans. Organize books, candles, and daily essentials into a tidy, functional display."
               img="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
             />
             <FeatureCard
               icon={Briefcase}
-              title="Executive Workspace"
-              subtitle="Professional Clarity"
+              title="Workspace Management"
+              subtitle="Productivity"
               delay="0.3s"
-              desc="Instantly create a focused work environment. Spacious enough for your laptop and essentials, keeping your workflow organized and mobile."
+              desc="Instantly create a focused work environment. Spacious enough for laptops and documents, keeping office workflows organized and mobile."
               img="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
             />
           </div>
@@ -196,7 +194,7 @@ export default function App() {
                 className="absolute top-10 right-10 bg-white p-4 rounded-xl shadow-lg animate-float"
                 style={{ animationDelay: "1s" }}
               >
-                <span className="block text-4xl font-serif text-charcoal-900">
+                <span className="block text-4xl font-bold text-charcoal-900">
                   24"
                 </span>
                 <span className="text-xs uppercase tracking-widest text-stone-500">
@@ -207,7 +205,7 @@ export default function App() {
                 className="absolute bottom-10 left-10 bg-white p-4 rounded-xl shadow-lg animate-float"
                 style={{ animationDelay: "1.5s" }}
               >
-                <span className="block text-4xl font-serif text-charcoal-900">
+                <span className="block text-4xl font-bold text-charcoal-900">
                   18"
                 </span>
                 <span className="text-xs uppercase tracking-widest text-stone-500">
@@ -221,12 +219,14 @@ export default function App() {
               <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">
                 Product Details
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-charcoal-900 mt-3 mb-6">
-                Crafted for <span className="italic">Excellence</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-charcoal-900 mt-3 mb-6">
+                Commercial Grade{" "}
+                <span className="text-stone-500">Durability</span>
               </h2>
               <p className="text-stone-500 text-lg mb-12 leading-relaxed">
-                Every detail has been carefully considered to deliver a product
-                that exceeds expectations in both form and function.
+                Engineered for high-traffic environments. Reinforced materials
+                and smart design ensure longevity in retail, hospitality, and
+                home settings.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6">
@@ -246,7 +246,7 @@ export default function App() {
                   badge="COMMERCIAL GRADE"
                   icon={ShieldCheck}
                   title="Premium Durability"
-                  desc="Crafted from high-quality materials built to withstand daily use."
+                  desc="Constructed from high-impact materials built to withstand heavy daily use."
                 />
                 <SpecCard
                   badge="12+ COLORS"
@@ -270,9 +270,9 @@ export default function App() {
             <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">
               For Business
             </span>
-            <h2 className="text-4xl md:text-6xl font-serif mt-4 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6 leading-tight">
               Bulk & Custom <br />{" "}
-              <span className="italic text-stone-400">Orders</span>
+              <span className="text-stone-400">Orders</span>
             </h2>
             <p className="text-stone-400 text-lg mb-10 leading-relaxed">
               We partner with businesses of all sizes to provide premium trays
@@ -298,7 +298,7 @@ export default function App() {
             </div>
             <button
               onClick={() => scrollToSection("contact")}
-              className="w-full md:w-auto bg-white text-charcoal-900 px-8 py-4 rounded-lg font-bold hover:bg-stone-200 transition-colors"
+              className="w-full md:w-auto bg-[#a68d26] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#85711e] transition-colors"
             >
               Get Wholesale Pricing
             </button>
@@ -330,10 +330,10 @@ export default function App() {
               <span className="text-xs font-bold tracking-widest text-stone-400 uppercase mb-4 block">
                 Get In Touch
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-charcoal-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-charcoal-900 mb-6">
                 Wholesale Pricing
                 <br />
-                <span className="italic text-stone-500">& Color Catalog</span>
+                <span className="text-stone-500">& Color Catalog</span>
               </h2>
               <p className="text-stone-500 text-lg mb-10 leading-relaxed">
                 Complete the form to receive our wholesale pricing sheet and
@@ -343,7 +343,7 @@ export default function App() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-stone-50 rounded-full">
-                    <Mail className="text-charcoal-900" size={20} />
+                    <Mail className="text-[#a68d26]" size={20} />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-stone-400 uppercase tracking-wider">
@@ -356,7 +356,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-stone-50 rounded-full">
-                    <Phone className="text-charcoal-900" size={20} />
+                    <Phone className="text-[#a68d26]" size={20} />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-stone-400 uppercase tracking-wider">
@@ -367,7 +367,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-stone-50 rounded-full">
-                    <MapPin className="text-charcoal-900" size={20} />
+                    <MapPin className="text-[#a68d26]" size={20} />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-stone-400 uppercase tracking-wider">
@@ -389,7 +389,7 @@ export default function App() {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all"
                       placeholder="John Smith"
                     />
                   </div>
@@ -399,7 +399,7 @@ export default function App() {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all"
                       placeholder="Company Inc."
                     />
                   </div>
@@ -411,7 +411,7 @@ export default function App() {
                     </label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -421,7 +421,7 @@ export default function App() {
                     </label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -432,7 +432,7 @@ export default function App() {
                     <label className="text-xs font-bold text-charcoal-900 uppercase tracking-wider">
                       Business Type *
                     </label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all appearance-none">
+                    <select className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all appearance-none">
                       <option value="" disabled selected>
                         Select type
                       </option>
@@ -446,7 +446,7 @@ export default function App() {
                     <label className="text-xs font-bold text-charcoal-900 uppercase tracking-wider">
                       Estimated Quantity
                     </label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all appearance-none">
+                    <select className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all appearance-none">
                       <option value="" disabled selected>
                         Select range
                       </option>
@@ -463,12 +463,12 @@ export default function App() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-sage-500 bg-white transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-[#a68d26] bg-white transition-all resize-none"
                     placeholder="Tell us about your needs, preferred colors, or any questions..."
                   ></textarea>
                 </div>
 
-                <button className="w-full bg-charcoal-900 text-white font-bold py-4 rounded-xl hover:bg-black transition-all shadow-lg hover:shadow-xl mt-2">
+                <button className="w-full bg-[#a68d26] text-white font-bold py-4 rounded-xl hover:bg-[#85711e] transition-all shadow-lg hover:shadow-xl mt-2">
                   Request Pricing & Catalog
                 </button>
                 <p className="text-xs text-stone-400 text-center mt-4">
@@ -484,7 +484,7 @@ export default function App() {
       {/* --- FOOTER --- */}
       <footer className="bg-charcoal-900 text-stone-400 py-12 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-2xl font-serif text-white font-bold">Tulip</div>
+          <div className="text-2xl font-bold text-white">Tulip Trays</div>
           <div className="flex gap-8 text-sm">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
@@ -517,10 +517,14 @@ const Navbar = ({ onNavigate }) => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div
-          className="text-2xl font-serif text-charcoal-900 font-bold cursor-pointer"
+          className="flex items-center gap-3 text-2xl font-bold text-charcoal-900 cursor-pointer"
           onClick={() => onNavigate("hero")}
         >
-          Tulip Tray
+          <img
+            src="logo4.png"
+            alt="TulipTrays"
+            className="h-28 w-64 object-contain"
+          />
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
           <button
@@ -543,7 +547,7 @@ const Navbar = ({ onNavigate }) => {
           </button>
           <button
             onClick={() => onNavigate("contact")}
-            className="bg-charcoal-900 text-white px-5 py-2.5 rounded-full hover:bg-black transition-all"
+            className="bg-[#a68d26] text-white px-5 py-2.5 rounded-full hover:bg-[#85711e] transition-all"
           >
             Get Catalog
           </button>
@@ -569,7 +573,7 @@ const FeatureCard = ({ icon: Icon, title, subtitle, desc, img, delay }) => (
   <div className="group bg-white rounded-2xl p-3 pb-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 border border-stone-100 ease-out">
     <div className="relative h-64 mb-6 overflow-hidden rounded-xl">
       <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg z-10 shadow-sm">
-        <Icon size={20} className="text-charcoal-900" />
+        <Icon size={20} className="text-[#a68d26]" />
       </div>
       <img
         src={img}
@@ -581,7 +585,7 @@ const FeatureCard = ({ icon: Icon, title, subtitle, desc, img, delay }) => (
       <div className="text-xs font-bold tracking-widest text-stone-400 uppercase mb-2">
         {subtitle}
       </div>
-      <h3 className="text-2xl font-serif text-charcoal-900 mb-2 group-hover:text-sage-500 transition-colors">
+      <h3 className="text-2xl font-bold text-charcoal-900 mb-2 group-hover:text-[#a68d26] transition-colors">
         {title}
       </h3>
       <p className="text-stone-500 text-sm leading-relaxed">{desc}</p>
@@ -593,9 +597,9 @@ const SpecCard = ({ badge, icon: Icon, title, desc }) => (
   <div className="bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
     <div className="flex items-center justify-between mb-4">
       <div className="bg-stone-50 p-3 rounded-full">
-        <Icon className="text-charcoal-900" size={20} />
+        <Icon className="text-[#a68d26]" size={20} />
       </div>
-      <span className="bg-charcoal-900 text-white text-[10px] font-bold px-2 py-1 rounded-full tracking-widest uppercase">
+      <span className="bg-[#a68d26] text-white text-[10px] font-bold px-2 py-1 rounded-full tracking-widest uppercase">
         {badge}
       </span>
     </div>
@@ -606,7 +610,7 @@ const SpecCard = ({ badge, icon: Icon, title, desc }) => (
 
 const Stat = ({ val, label }) => (
   <div className="group">
-    <div className="text-4xl md:text-5xl font-serif text-white mb-2 group-hover:scale-110 transition-transform duration-300 ease-out inline-block">
+    <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300 ease-out inline-block">
       {val}
     </div>
     <div className="text-xs uppercase tracking-widest text-stone-500">
