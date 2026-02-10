@@ -28,11 +28,9 @@ export default function App() {
   }, []);
 
   const heroImages = {
-    charcoal:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2000&auto=format&fit=crop",
-    sage: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=2080&auto=format&fit=crop",
-    cream:
-      "https://images.unsplash.com/photo-1595515106967-14380990a5d0?q=80&w=1974&auto=format&fit=crop",
+    charcoal: "tray3.jpg",
+    sage: "tray4.jpg",
+    cream: "tray0.jpg",
   };
 
   const scrollToSection = (id) => {
@@ -145,7 +143,7 @@ export default function App() {
               subtitle="Durable & Spill-Proof"
               delay="0s"
               desc="Designed for high-volume food serving. The spill-proof rim ensures a clean presentation for hotels, restaurants, and catering."
-              img="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
+              img="tray1.jpg"
             />
             <FeatureCard
               icon={Palette}
@@ -153,7 +151,7 @@ export default function App() {
               subtitle="Easy Cleanup"
               delay="0.1s"
               desc="The ultimate workspace for kids' activities. Contains lego, sand, and art supplies, making cleanup effortless for schools and daycares."
-              img="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=1974&auto=format&fit=crop"
+              img="tray3.jpg"
             />
             <FeatureCard
               icon={Home}
@@ -161,7 +159,7 @@ export default function App() {
               subtitle="Functional Display"
               delay="0.2s"
               desc="A solid foundation for coffee tables or ottomans. Organize books, candles, and daily essentials into a tidy, functional display."
-              img="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop"
+              img="tray4.jpg"
             />
             <FeatureCard
               icon={Briefcase}
@@ -169,7 +167,7 @@ export default function App() {
               subtitle="Productivity"
               delay="0.3s"
               desc="Instantly create a focused work environment. Spacious enough for laptops and documents, keeping office workflows organized and mobile."
-              img="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+              img="tray0.jpg"
             />
           </div>
         </div>
@@ -183,7 +181,7 @@ export default function App() {
             <div className="relative group">
               <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2000&auto=format&fit=crop"
+                  src="tray2.jpg"
                   alt="Tray Dimensions"
                   className="w-full h-full object-cover"
                 />
