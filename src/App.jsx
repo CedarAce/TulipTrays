@@ -515,11 +515,12 @@ const Navbar = ({ onNavigate }) => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
       ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3" // Compact when scrolling
-          : "bg-transparent py-4 lg:py-6" // Taller ONLY on large screens (lg)
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-transparent py-4 lg:py-6"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      {/* CHANGE: 'justify-center' centers logo on mobile, 'md:justify-between' spreads items on desktop */}
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center md:justify-between">
         <div
           className="flex items-center gap-3 text-2xl font-bold text-charcoal-900 cursor-pointer"
           onClick={() => onNavigate("hero")}
@@ -527,13 +528,12 @@ const Navbar = ({ onNavigate }) => {
           <img
             src="logo4.png"
             alt="TulipTrays"
-            // NEW SIZING LOGIC:
-            // h-9  (36px) = Mobile
-            // h-10 (40px) = Small Laptop (md) -> Much cleaner!
-            // h-14 (56px) = Large Desktop (lg) -> The "Luxury" size
+            // Combined sizing fixes: Mobile (h-9), Laptop (h-10), Desktop (h-14)
             className="h-9 md:h-10 lg:h-14 w-auto object-contain transition-all duration-300"
           />
         </div>
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-stone-600">
           <button
             onClick={() => onNavigate("versatility")}
@@ -560,9 +560,8 @@ const Navbar = ({ onNavigate }) => {
             Contact Us
           </button>
         </div>
-        <button className="md:hidden text-charcoal-900">
-          <Menu size={24} />
-        </button>
+
+        {/* REMOVED: The hamburger menu button is gone */}
       </div>
     </nav>
   );
