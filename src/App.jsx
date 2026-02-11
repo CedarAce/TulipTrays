@@ -512,7 +512,12 @@ const Navbar = ({ onNavigate }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+      ${
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-3" // Compact when scrolling
+          : "bg-transparent py-4 lg:py-6" // Taller ONLY on large screens (lg)
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div
@@ -522,10 +527,14 @@ const Navbar = ({ onNavigate }) => {
           <img
             src="logo4.png"
             alt="TulipTrays"
-            className="h-12 md:h-20 w-auto object-contain"
+            // NEW SIZING LOGIC:
+            // h-9  (36px) = Mobile
+            // h-10 (40px) = Small Laptop (md) -> Much cleaner!
+            // h-14 (56px) = Large Desktop (lg) -> The "Luxury" size
+            className="h-9 md:h-10 lg:h-14 w-auto object-contain transition-all duration-300"
           />
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-stone-600">
           <button
             onClick={() => onNavigate("versatility")}
             className="hover:text-charcoal-900 transition-colors"
@@ -546,7 +555,7 @@ const Navbar = ({ onNavigate }) => {
           </button>
           <button
             onClick={() => onNavigate("contact")}
-            className="bg-[#a68d26] text-white px-5 py-2.5 rounded-full hover:bg-[#85711e] transition-all"
+            className="bg-[#a68d26] text-white px-5 py-2.5 rounded-full hover:bg-[#85711e] transition-all shadow-md hover:shadow-lg"
           >
             Contact Us
           </button>
