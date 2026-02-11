@@ -529,7 +529,7 @@ const Navbar = ({ onNavigate }) => {
             src="logo4.png"
             alt="TulipTrays"
             // Combined sizing fixes: Mobile (h-9), Laptop (h-10), Desktop (h-14)
-            className="h-9 md:h-10 lg:h-14 w-auto object-contain transition-all duration-300"
+            className="h-10 md:h-10 lg:h-14 w-auto object-contain transition-all duration-300"
           />
         </div>
 
