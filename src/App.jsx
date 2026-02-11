@@ -62,9 +62,11 @@ export default function App() {
           </div>
 
           <div className="animate-fade-in-up-delay opacity-0">
+            {/* UPDATED SENTENCE HERE */}
             <p className="text-lg text-stone-600 max-w-xl mx-auto mb-10 font-light leading-relaxed">
-              A commercial-grade, oversized surface designed for hospitality,
-              schools, and efficient workspaces.
+              The <strong>Tulip Tray</strong> combines commercial-grade
+              durability with oversized elegance—engineered to elevate
+              hospitality, education, and creative workspaces.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 md:mb-16">
@@ -86,7 +88,6 @@ export default function App() {
               </button>
             </div>
           </div>
-
           <div
             className="relative w-full max-w-5xl mx-auto animate-fade-in opacity-0"
             style={{ animationDelay: "0.4s" }}
