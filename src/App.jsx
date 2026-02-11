@@ -50,7 +50,7 @@ export default function App() {
       {/* --- HERO SECTION --- */}
       <section
         id="hero"
-        className="relative pt-32 pb-12 md:pt-48 md:pb-24 px-6"
+        className="relative pt-28 pb-12 md:pt-40 md:pb-20 px-6"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in-up opacity-0">
@@ -67,16 +67,16 @@ export default function App() {
               schools, and efficient workspaces.
             </p>
 
-            <div className="flex items-center justify-center gap-6 mb-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 md:mb-16">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="bg-[#a68d26] text-white px-8 py-4 rounded-full font-medium hover:bg-[#85711e] transition-all hover:scale-105 shadow-xl"
+                className="bg-[#a68d26] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-medium hover:bg-[#85711e] transition-all hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base"
               >
                 Request Wholesale Pricing
               </button>
               <button
                 onClick={() => scrollToSection("versatility")}
-                className="text-charcoal-900 font-medium hover:text-[#a68d26] flex items-center gap-2 group"
+                className="text-charcoal-900 font-medium hover:text-[#a68d26] flex items-center gap-2 group text-sm md:text-base"
               >
                 Explore Uses{" "}
                 <ArrowDown
@@ -124,7 +124,7 @@ export default function App() {
       </section>
 
       {/* --- VERSATILITY GRID --- */}
-      <section id="versatility" className="py-24 bg-white">
+      <section id="versatility" className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">
@@ -174,7 +174,7 @@ export default function App() {
       </section>
 
       {/* --- NEW: CRAFTED FOR EXCELLENCE SECTION --- */}
-      <section id="specs" className="py-24 bg-cream-50">
+      <section id="specs" className="py-16 md:py-24 bg-cream-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Image with Dimension Tags */}
@@ -261,7 +261,7 @@ export default function App() {
       {/* --- WHOLESALE SECTION (UPDATED: No Testimonial) --- */}
       <section
         id="wholesale"
-        className="py-24 bg-charcoal-900 text-cream-50 overflow-hidden"
+        className="py-16 md:py-24 bg-charcoal-900 text-cream-50 overflow-hidden"
       >
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
           <div>
@@ -319,7 +319,7 @@ export default function App() {
       {/* --- CONTACT SECTION --- */}
       <section
         id="contact"
-        className="py-24 bg-white border-t border-stone-200"
+        className="py-16 md:py-24 bg-white border-t border-stone-200"
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-5 gap-16">
@@ -521,7 +521,7 @@ const Navbar = ({ onNavigate }) => {
           <img
             src="logo4.png"
             alt="TulipTrays"
-            className="h-28 w-64 object-contain"
+            className="h-12 md:h-20 w-auto object-contain"
           />
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
@@ -547,7 +547,7 @@ const Navbar = ({ onNavigate }) => {
             onClick={() => onNavigate("contact")}
             className="bg-[#a68d26] text-white px-5 py-2.5 rounded-full hover:bg-[#85711e] transition-all"
           >
-            Get Catalog
+            Contact Us
           </button>
         </div>
         <button className="md:hidden text-charcoal-900">
